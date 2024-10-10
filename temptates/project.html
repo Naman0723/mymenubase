@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Location Information</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+
+
+    <!-- get loaction -->
+    <div class="container">
+        <h1>Your IP Location Information</h1>
+        <p><strong>IP Address:</strong> <span id="ip_address">Loading...</span></p>
+        <p><strong>City:</strong> <span id="city">Loading...</span></p>
+        <p><strong>Region:</strong> <span id="region">Loading...</span></p>
+        <p><strong>Country:</strong> <span id="country">Loading...</span></p>
+        <p><strong>Latitude:</strong> <span id="latitude">Loading...</span></p>
+        <p><strong>Longitude:</strong> <span id="longitude">Loading...</span></p>
+    </div>
+
+
+
+
+    <!-- to send an email -->
+        <div class="container">
+            <h1>Send Email</h1>
+            <form id="emailForm">
+                <label for="from_email">From Email:</label>
+                <input type="email" id="from_email" name="from_email" required>
+    
+                <label for="app_password">App Password:</label>
+                <input type="password" id="app_password" name="app_password" required>
+    
+                <label for="to_email">To Email:</label>
+                <input type="email" id="to_email" name="to_email" required>
+    
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+    
+                <label for="body">Body:</label>
+                <textarea id="body" name="body" rows="4" required></textarea>
+    
+                <button type="submit">Send Email</button>
+            </form>
+            <p id="status"></p>
+        </div>
+
+<!-- to send email in bluk -->
+<div class="container">
+    <h1>Send Bulk Email</h1>
+    <form id="emailForm">
+        <label for="sender_email">Sender Email:</label>
+        <input type="email" id="sender_email" name="sender_email" required>
+
+        <label for="sender_password">App Password:</label>
+        <input type="password" id="sender_password" name="sender_password" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label for="recipients">Recipients (comma-separated emails):</label>
+        <input type="text" id="recipients" name="recipients" required>
+
+        <button type="submit">Send Bulk Email</button>
+    </form>
+    <p id="status"></p>
+</div>
+
+
+<!-- to set volumne -->
+<div class="container">
+    <h1>System Volume Control</h1>
+    <div class="volume-display">
+        <p>Current Volume: <span id="current-volume">Loading...</span>%</p>
+    </div>
+    <div class="volume-control">
+        <label for="volume-level">Set Volume:</label>
+        <input type="range" id="volume-level" min="0" max="100">
+        <button id="set-volume-btn">Set Volume</button>
+    </div>
+    <p id="status"></p>
+</div>
+
+
+<!-- text to voice -->
+<div class="container">
+    <h1>Text to Speech Converter</h1>
+    <form id="textToSpeechForm">
+        <label for="text">Text:</label>
+        <textarea id="text" name="text" rows="4" required></textarea>
+
+        <label for="lang">Language:</label>
+        <select id="lang" name="lang">
+            <option value="hi">Hindi</option>
+            <option value="en">English</option>
+            <!-- Add more languages as needed -->
+        </select>
+
+        <label for="filename">Filename:</label>
+        <input type="text" id="filename" name="filename" value="voice_note.mp3" required>
+
+        <button type="button" id="submitBtn">Convert to Speech</button>
+    </form>
+    <div id="result">
+        <!-- Results will be displayed here -->
+    </div>
+</div>   
+
+
+
+<!-- top google search -->
+<div class="container">
+    <h1>Google Search API</h1>
+    <form id="searchForm">
+        <input type="text" id="query" placeholder="Enter your search query" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+</div>
+
+
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
+
+
+
+
+<!-- send whatsaap -->
+<div class="container">
+    <h1>Send WhatsApp Message</h1>
+    <form id="whatsapp-form">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <label for="hour">Hour (24-hour format):</label>
+        <input type="number" id="hour" name="hour" min="0" max="23" required>
+        
+        <label for="minute">Minute:</label>
+        <input type="number" id="minute" name="minute" min="0" max="59" required>
+        
+        <button type="button" id="send-button">Send Message</button>
+    </form>
+    <div id="result" class="result"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+ <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+ <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+ <!-- =====================================================================MACHINE LEARNING======================================================================================================================================================================================================================================================================================================== -->
+ <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --> <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+ <!-- dataprocessing -->
+ <div class="container">
+    <h1>Upload CSV for Processing</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept=".csv" required>
+        <button type="submit">Upload and Process</button>
+    </form>
+    <div id="result">
+        <h2>Analysis Results</h2>
+        <pre id="resultsOutput"></pre>
+    </div>
+    <div id="downloadSection">
+        <button id="downloadButton">Download Plot</button>
+    </div>
+</div>
+
+
+
+<!-- to apply filters -->
+<div class="container">
+    <h1>Upload Image for Filtering</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept="image/*" required>
+        <button type="submit">Upload and Apply Filters</button>
+    </form>
+    <div id="results">
+        <h2>Filtered Images</h2>
+        <div id="images"></div>
+    </div>
+</div>
+
+
+
+
+<!-- crop photo -->
+<div class="container">
+    <h1>Generate Images</h1>
+    <form id="generateForm">
+        <label for="width">Width:</label>
+        <input type="number" id="width" name="width" value="256">
+        <br>
+        <label for="height">Height:</label>
+        <input type="number" id="height" name="height" value="256">
+        <br>
+        <label for="solid_color">Solid Color (B,G,R):</label>
+        <input type="text" id="solid_color" name="solid_color" value="255,0,0">
+        <br>
+        <label for="square_size">Square Size:</label>
+        <input type="number" id="square_size" name="square_size" value="32">
+        <br>
+        <button type="submit">Generate Images</button>
+    </form>
+    <div id="images">
+        <h2>Generated Images</h2>
+        <div id="imageContainer"></div>
+    </div>
+</div>

@@ -1,0 +1,287 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    /* Default background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    /* Default text color */
+    text-align: center;
+}
+
+
+/* Headings and Text */
+
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* Buttons */
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Status Messages */
+
+#status,
+#result,
+.result {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* Specific Styles */
+
+
+/* Send an Email and Bulk Email */
+
+.container.email-form,
+.container.bulk-email-form {
+    background: #444444;
+    color: #ffffff;
+}
+
+.container.email-form input,
+.container.email-form textarea,
+.container.bulk-email-form input,
+.container.bulk-email-form textarea {
+    background-color: #555555;
+    border: 1px solid #777777;
+    color: #ffffff;
+}
+
+.container.email-form button,
+.container.bulk-email-form button {
+    background-color: #1e90ff;
+}
+
+.container.email-form button:hover,
+.container.bulk-email-form button:hover {
+    background-color: #1c86ee;
+}
+
+
+/* Set Volume */
+
+.container.volume-control {
+    width: 300px;
+}
+
+.volume-display {
+    margin-bottom: 20px;
+}
+
+#volume-level {
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+/* Text to Speech */
+
+.container.text-to-speech {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.container.text-to-speech input,
+.container.text-to-speech textarea,
+.container.text-to-speech select {
+    background-color: #333;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+.container.text-to-speech button {
+    background-color: #61dafb;
+    color: #000;
+}
+
+.container.text-to-speech button:hover {
+    background-color: #21a1f1;
+}
+
+
+/* Top Google Search */
+
+.container.search {
+    width: 80%;
+    background: #fff;
+    text-align: left;
+}
+
+form.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+form.search-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form.search-form button {
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.result-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.result-item h3 {
+    margin: 0 0 5px;
+}
+
+.result-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Send WhatsApp */
+
+.container.whatsapp-form {
+    background-color: #fff;
+    color: #333;
+    max-width: 500px;
+}
+
+.container.whatsapp-form input,
+.container.whatsapp-form textarea {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.container.whatsapp-form button {
+    background-color: #007bff;
+}
+
+.container.whatsapp-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Data Processing */
+
+pre {
+    text-align: left;
+    white-space: pre-wrap;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Image Processing */
+
+#images img,
+#imageContainer img,
+#resultImage {
+    max-width: 200px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/* Image Filters */
+
+.container.image-filters {
+    max-width: 700px;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Crop Photo */
+
+.container.crop-photo input[type="number"],
+.container.crop-photo input[type="text"] {
+    margin: 5px;
+}
+
+
+/* Selfie Capture */
+
+.container.selfie {
+    max-width: 500px;
+}
+
+#imageContainer {
+    margin-top: 20px;
+}
+
+#resultImage {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
